@@ -131,6 +131,8 @@ dependencies {
     implementation 'org.ehcache:ehcache:3.8.1'
     implementation 'javax.cache:cache-api:1.1.1'
 
+    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+
     compileOnly('org.springframework.boot:spring-boot-configuration-processor')
 
     testCompile('org.springframework.boot:spring-boot-starter-test')

@@ -16,11 +16,11 @@
 
 package com.linecorp.line.auth.fido.fido2.rpserver.model.transport;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.linecorp.line.auth.fido.fido2.common.AttestationConveyancePreference;
 import com.linecorp.line.auth.fido.fido2.common.AuthenticatorSelectionCriteria;
 import com.linecorp.line.auth.fido.fido2.common.extension.CredProtect;
-
-import lombok.Data;
+import lombok.*;
 
 @Data
 public class ServerPublicKeyCredentialCreationOptionsRequest {
@@ -28,5 +28,7 @@ public class ServerPublicKeyCredentialCreationOptionsRequest {
     private String displayName;
     private AuthenticatorSelectionCriteria authenticatorSelection;
     private AttestationConveyancePreference attestation = AttestationConveyancePreference.none;
+    private Extensions extensions;
     private CredProtect credProtect;
+
 }

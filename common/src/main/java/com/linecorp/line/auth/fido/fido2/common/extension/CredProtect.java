@@ -22,4 +22,10 @@ import lombok.Data;
 public class CredProtect {
     private CredentialProtectionPolicy credentialProtectionPolicy;
     private Boolean enforceCredentialProtectionPolicy;
+
+    //    "extensions":
+//    {
+//        "example.extension.bool":true
+//        "creprops":true
+//    }
 }

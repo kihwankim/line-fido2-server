@@ -120,6 +120,7 @@ public class AdapterController {
             @RequestHeader String host,
             @RequestBody ServerPublicKeyCredentialCreationOptionsRequest optionsRequest,
             HttpServletResponse httpServletResponse) {
+        log.info("extension 결과 {}", optionsRequest.getExtensions().isBoolData());
 
         // set header
         HttpHeaders httpHeaders = new HttpHeaders();
@@ -202,7 +203,7 @@ public class AdapterController {
 
         if (!StringUtils.isEmpty(rpPort)) {
             builder.append(":")
-                   .append(rpPort);
+                    .append(rpPort);
         }
 
         // set header
@@ -308,7 +309,7 @@ public class AdapterController {
 
         if (!StringUtils.isEmpty(rpPort)) {
             builder.append(":")
-                   .append(rpPort);
+                    .append(rpPort);
         }
 
         // set header
